@@ -131,7 +131,7 @@ async def handle_link(message: types.Message):
         logging.error(f"Processing error: {e}")
         await message.answer(f"❌ Error: {e}")
 
-        # Резервная очистка на случай падения скрипта посередине процесса
+
         if raw_file_path and os.path.exists(raw_file_path):
             try:
                 os.remove(raw_file_path)
